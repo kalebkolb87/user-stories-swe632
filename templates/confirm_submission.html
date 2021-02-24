@@ -23,6 +23,17 @@
 <div style="text-align:center;">
     As a {{ submission.work_role }}, I need {{ submission.feature }}, so that
     I can {{ submission.rationale }} <br><br>
+    <h3>If you are happy with your story, please provide contact information <br>
+    and click <em><b>Submit</b></em>, otherwise click <em><b>Cancel</b></em> to start over</h3>
+        <p>
+            First Name:
+            <input type="text" name="first_name">
+            Last Name:
+            <input type="text" name="last_name">
+            Email Address:
+            <input type="text" name="email">
+        </p>
+
     <a href="{{ url_for('welcome') }}"><button>Cancel</button></a>
     <a href="{{ url_for('successful_submission') }}"><button type="submit">Submit</button></a>
 </div>

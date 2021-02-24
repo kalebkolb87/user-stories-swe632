@@ -19,6 +19,23 @@
     <li><a href="{{ url_for('about') }}">About User Stories</a></li>
 </ul>
 <br> <br>
-<h2 style="text-align:center;">Thank you for voting!</h2>
+
+<div style="text-align:center;">
+    <h2 style="text-align:center;">Thank you for your vote. <br><br>If you'd like to  provide
+    contact information to speak more about the feature<br> or be a part of the testing team
+    please provide your contact information below</h2>
+        <p>
+            First Name:
+            <input type="text" name="first_name">
+            Last Name:
+            <input type="text" name="last_name">
+            Email Address:
+            <input type="text" name="email">
+        </p>
+
+    <a href="{{ url_for('welcome') }}"><button>No Thanks</button></a>
+    <a href="{{ url_for('confirm_vote') }}"><button type="submit">Submit</button></a>
+</div>
+
 
 {% endblock %}

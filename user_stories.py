@@ -42,3 +42,7 @@ def upvote():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/confirm_vote")
+def confirm_vote():
+    return render_template("confirm_vote.html")
