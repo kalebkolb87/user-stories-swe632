@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}About User Stories{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li style="margin: 0 auto 0 22%">
+        <a href="{{ url_for('welcome') }}">
+            User Story Tool
+        </a>
+    </li>
+    <br>
+    <br>
+</ul>
+<ul>
+    <li><a href="{{ url_for('new_submission') }}">New Submission</a></li>
+    <li><a href="{{ url_for('previous_submissions') }}">Previous Submissions</a></li>
+    <li><a class="active" href="{{ url_for('about') }}">About User Stories</a></li>
+</ul>
+<br> <br>
+<div style="text-align:center;">
+<h2><u><b>About User Stories</b></u></h2>
+    <h3><b>What is a User Story?</b></h3>
+    <p style="">A user story is a short concise statement to express a need or requirement</p>
+    <h3><b>Why write a User Story?</b></h3>
+        <p style="">To provide your input on a feature as a user!</p>
+    <h3><b>Contact Us!</b></h3>
+        user_stories@fakeurl.abc</>
+</div>
+
+{% endblock %}

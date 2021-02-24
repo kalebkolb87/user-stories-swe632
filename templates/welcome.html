@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}User Stories{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li style="margin: 0 auto 0 22%">
+        <a class="active" href="{{ url_for('welcome') }}">
+            User Story Tool
+        </a>
+    </li>
+    <br>
+    <br>
+</ul>
+<ul>
+    <li><a href="{{ url_for('new_submission') }}">New Submission</a></li>
+    <li><a href="{{ url_for('previous_submissions') }}">Previous Submissions</a></li>
+    <li><a href="{{ url_for('about') }}">About User Stories</a></li>
+</ul>
+<br> <br>
+<h2 style="text-align:center;">Welcome to the User Story Tool!</h2>
+<div style="text-align:center;">
+    To Submit a New Feature Request, Click <em><b>'New Submission'</em></b> <br><br>
+    To Review and Vote on Previous Feature Requests, Click <em><b>'Previous Submissions'</em></b> <br><br>
+    To Learn More About User Stories and this Tool, Click <em><b>'About User Stories'</em></b> <br><br><br><br>
+    <img src="/static/kanban.png" alt="Kanban Board" width="500", height="270">
+</div>
+
+{% endblock %}

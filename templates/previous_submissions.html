@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Previous Submissions{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li style="margin: 0 auto 0 22%">
+        <a href="{{ url_for('welcome') }}">
+            User Story Tool
+        </a>
+    </li>
+    <br>
+    <br>
+</ul>
+<ul>
+    <li><a href="{{ url_for('new_submission') }}">New Submission</a></li>
+    <li><a class="active" href="{{ url_for('previous_submissions') }}">Previous Submissions</a></li>
+    <li><a href="{{ url_for('about') }}">About User Stories</a></li>
+</ul>
+
+<br> <br>
+<h2 style="text-align:center;"><u>Previous User Stories</u></h2>
+
+<table>
+    <tr>
+        <th>Tool</th>
+        <th>Work Role</th>
+        <th>User Story</th>
+        <th>Vote</th>
+  </tr>
+    {% for user_story in user_stories %}
+    <tr>
+        <td>{{ user_story.tool }}</td>
+        <td>{{ user_story.work_role }}</td>
+        <td>{{ user_story.user_story }}</td>
+        <td style="text-align: center">
+         <a href="{{ url_for('upvote') }}"><button> + </button></a>
+        </td>
+    </tr>
+    <br>
+    {% endfor %}
+</table>
+
+{% endblock %}

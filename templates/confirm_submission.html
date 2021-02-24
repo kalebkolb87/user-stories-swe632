@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}User Stories{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li style="margin: 0 auto 0 22%">
+        <a href="{{ url_for('welcome') }}">
+            User Story Tool
+        </a>
+    </li>
+    <br>
+    <br>
+</ul>
+<ul>
+    <li><a class="active" href="{{ url_for('new_submission') }}">New Submission</a></li>
+    <li><a href="{{ url_for('previous_submissions') }}">Previous Submissions</a></li>
+    <li><a href="{{ url_for('about') }}">About User Stories</a></li>
+</ul>
+<br> <br>
+<h2 style="text-align:center;">Please Review Your Submission for {{ submission.tool }}</h2>
+<div style="text-align:center;">
+    As a {{ submission.work_role }}, I need {{ submission.feature }}, so that
+    I can {{ submission.rationale }} <br><br>
+    <a href="{{ url_for('welcome') }}"><button>Cancel</button></a>
+    <a href="{{ url_for('successful_submission') }}"><button type="submit">Submit</button></a>
+</div>
+
+{% endblock %}
